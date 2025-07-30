@@ -49,7 +49,7 @@ int main() {
     uint16_t *buffer = new uint16_t[TFT_WIDTH*TFT_HEIGHT];
     float hue=0.0f;
 
-    for(int i=0; i<0xFFFF; i++){
+    while(true){
         if(hue>360.0f){hue=0.0f;};
         for(int y=0; y<TFT_HEIGHT; y++){
             for(int x=0; x<TFT_WIDTH; x++){

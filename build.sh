@@ -1,1 +1,0 @@
-g++ -o display src/main.cpp ./libs/ST7789/ST7789.cpp -I./libs -l wiringPi

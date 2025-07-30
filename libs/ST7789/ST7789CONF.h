@@ -8,8 +8,8 @@
 #define RST_PIN (24)
 
 //Screen dimentions
-#define TFT_WIDTH (320)
-#define TFT_HEIGHT (240)
+#define Width (320)
+#define Height (240)
 
 //Screen effects
 //uncomment for inverted colors
@@ -23,3 +23,23 @@
 //#define DEG90 // uncomment for 90 degree orientation
 //#define DEG180 // uncomment for 180 degree orientation
 #define DEG270 // uncomment for 270 degree orientation
+
+#ifdef DEG0
+#define TFT_WIDTH (Height)
+#define TFT_HEIGHT (Width)
+#endif
+
+#ifdef DEG180
+#define TFT_WIDTH (Height)
+#define TFT_HEIGHT (Width)
+#endif
+
+#ifdef DEG90
+#define TFT_WIDTH (Width)
+#define TFT_HEIGHT (Height)
+#endif
+
+#ifdef DEG270
+#define TFT_WIDTH (Width)
+#define TFT_HEIGHT (Height)
+#endif

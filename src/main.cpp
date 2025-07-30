@@ -1,11 +1,7 @@
 #include <ST7789.h>
 #include <ST7789CONF.h>
 
-#include <stdio.h>
 #include <stdint.h>
-#include <unistd.h>
-
-#include <cstdint>
 #include <cmath>
 
 using namespace std;

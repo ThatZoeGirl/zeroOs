@@ -1,9 +1,6 @@
 #pragma once
 
 #include <wiringPi.h>
-#include <fcntl.h>
-#include <linux/spi/spidev.h>
-#include <sys/ioctl.h>
 #include <stdio.h>
 #include <unistd.h>
 #include <fcntl.h>

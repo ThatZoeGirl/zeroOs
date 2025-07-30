@@ -9,7 +9,7 @@
 enum filltype {
     OUTLINE,
     FILL
-}
+};
 
 /**
  * Determen where to draw a shape.
@@ -20,7 +20,7 @@ enum positionalType {
     TR,
     BL,
     BR
-}
+};
 
 // color related functions
 
@@ -69,7 +69,7 @@ class Canvas {
 
     private:
         uint16_t *buffer;
-}
+};
 
 /**
  * FrameBuffer:
@@ -78,7 +78,7 @@ class Canvas {
 class FrameBuffer: public Canvas {
     public:
         void pushFrame();
-}
+};
 
 /**
  * A layer that can be apart of the frame buffer.
@@ -87,4 +87,4 @@ class Sprite: public Canvas {
     public:
         Sprite(int width, int height, int zIndex);
         int zIndex = 0;
-}
+};

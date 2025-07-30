@@ -10,3 +10,6 @@ target_link_libraries(${PROJECT_NAME} wiringPi)
 
 add_subdirectory(libs/ST7789)
 target_link_libraries(${PROJECT_NAME} ST7789)
+
+add_subdirectory(libs/zGfx)
+target_link_libraries(${PROJECT_NAME} zGfx)

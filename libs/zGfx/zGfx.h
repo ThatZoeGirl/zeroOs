@@ -1,5 +1,9 @@
 #pragma once
+#include <stdio.h>
 #include <stdint.h>
+#include <cmath>
+
+using namespace std;
 
 // Enums
 /**
@@ -53,22 +57,23 @@ class Canvas {
     public:
         Canvas(int width, int height);
 
+        int coord(int x, int y);
+
         void setPixel(int x, int y, uint16_t color);
 
-        void drawLine(int x1, int y1, int x2, int y2, int borderThickness, uint16_t color);
+        void drawLine(int x1, int y1, int x2, int y2, uint16_t color);
 
-        void drawSquare(int x, int y, int width, int height, int borderThickness, uint16_t colorPry, uint16_t colorSec, filltype fill, positionalType position);
+        void drawSquare(int x, int y, int width, int height, uint16_t colorPry, uint16_t colorSec, filltype fill, positionalType position);
 
         void drawCircle(int x, int y, int radius, int borderThickness, uint16_t colorPry, uint16_t colorSec, filltype fill, positionalType position);
 
         void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3, int borderThickness, uint16_t colorPry, uint16_t colorSec, filltype fill);
 
-    protected:
-        int width;
-        int height;
-
+        int width = 0;
+        int height = 0;
+        uint16_t* buffer;
     private:
-        uint16_t *buffer;
+        bool isSprite = false;
 };
 
 /**
@@ -77,7 +82,10 @@ class Canvas {
  */
 class FrameBuffer: public Canvas {
     public:
+        using Canvas::Canvas;
         void pushFrame();
+    private:
+        bool isSprite = false;
 };
 
 /**
@@ -87,4 +95,6 @@ class Sprite: public Canvas {
     public:
         Sprite(int width, int height, int zIndex);
         int zIndex = 0;
+    private:
+        bool isSprite = true;
 };

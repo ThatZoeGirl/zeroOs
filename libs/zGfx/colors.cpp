@@ -1,8 +1,4 @@
 #include <zGfx.h>
-#include <cmath>
-#include <stdio.h>
-
-using namespace std;
 
 uint16_t rgb(uint8_t r, uint8_t g, uint8_t b){
     r = (r >> 3) & 0x1F;  // 5 bits for red
